@@ -34,7 +34,21 @@ class Drawer
 		end
 	end
 
-	#retrieve the current time of year (month?)
+	def time_of_year
+		month = Time.new.strftime("%B")
+		if month == "December" || month == "January" || month == "February" || month == "March"  
+			puts "It's Winter. Get your warm clothes in your main drawers"
+		elsif month == "April" || month == "May" || month == "June" || month == "July" || month == "August"
+			puts "It's Summer. Get your thin linins in your main drawers"
+		else
+			puts "It isn't Winter or Summer so weather can vary with slight breezes and warm days"
+		end
+	end
+	
+	def recommend
+		time_of_year
+		#get the month and then sort in your clothes from the array value of a hash categorizing all clothing
+	end
 	#give a recommendation of how to organize
 
 end
@@ -45,4 +59,3 @@ class Dresser
 		@number_of_drawers = number_of_drawers
 	end
 end
-
